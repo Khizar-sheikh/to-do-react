@@ -1,0 +1,121 @@
+.add-task-form {
+  position: absolute;
+  z-index: 999;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #3498db; /* Updated border color to a cool blue */
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increased shadow for a subtle effect */
+  background-color: #ffffff;
+  top: 62%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transform-origin: top;
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.add-task-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.add-task-form label input {
+  width: 100%;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.add-task-form h2 {
+  font-size: 1.8em; /* Increased font size for a more prominent header */
+  margin-bottom: 20px;
+  color: #3498db; /* Matching the border color */
+}
+
+.add-task-form form {
+  display: grid;
+  gap: 15px; /* Increased gap between form elements */
+}
+
+.add-task-form label {
+  text-align: left; /* Aligning labels to the left */
+}
+
+.add-task-form input,
+.add-task-form textarea,
+.add-task-form select {
+  width: 100%;
+  padding: 12px; /* Increased padding for better input styling */
+  border: 1px solid #3498db; /* Matching the border color */
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: all 0.3s; /* Smooth transition for better user experience */
+}
+
+/* Style for the input when it's focused */
+.add-task-form input:focus,
+.add-task-form textarea:focus,
+.add-task-form select:focus {
+  border-color: #2980b9; /* Change border color on focus */
+}
+
+/* Style for the label when the input is focused */
+.add-task-form input:focus + label,
+.add-task-form textarea:focus + label,
+.add-task-form select:focus + label {
+  transform: translateY(-15px); /* Move label up on focus */
+  font-size: 0.9em; /* Decrease font size on focus */
+  color: #2980b9; /* Change label color on focus */
+}
+
+.add-task-form button {
+  background-color: #2ecc71; /* Green button color */
+  color: white;
+  padding: 12px 20px; /* Increased padding for better button styling */
+  border: none;
+  margin: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s; /* Smooth transition for better user experience */
+}
+
+.add-task-form button:hover {
+  background-color: #27ae60; /* Darker green on hover */
+}
+.add-task-form button.cancel {
+  background-color: #f74848; /* Green button color */
+  color: white;
+  padding: 12px 20px; /* Increased padding for better button styling */
+  border: none;
+  margin: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s; /* Smooth transition for better user experience */
+}
+
+.add-task-form button.cancel:hover {
+  background-color: #dd4f4f; /* Darker green on hover */
+}
+label.important {
+  padding: 5px;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between;
+}
+label.important input {
+  height: 20px;
+  width: 50%;
+}
